@@ -9,8 +9,9 @@ import {MatExpansionPanel} from '@angular/material';
         This is inside a componenet.
          <div
     cdkDropList
-    #todoList="cdkDropList"
+    #comp_todoList="cdkDropList"
     [cdkDropListData]="componenet_todo"
+    [cdkDropListConnectedTo]="[todoList]"
     class="example-list"
     (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let item of componenet_todo" cdkDrag>{{item}}</div>
@@ -30,6 +31,7 @@ componenet_todo = [
     'Walk dog'
   ];
    drop(event: CdkDragDrop<string[]>) {
+     console.log(event);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

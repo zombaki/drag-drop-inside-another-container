@@ -5,7 +5,7 @@ import {MatExpansionPanel} from '@angular/material';
 @Component({
   selector: 'hello',
   template: `
-          <div #dvDragElement>
+          <div #dvDragElement >
         This is inside a componenet.
          <div
     cdkDropList

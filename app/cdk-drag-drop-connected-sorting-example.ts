@@ -18,11 +18,7 @@ export class CdkDragDropConnectedSortingExample {
   ];
 
   done = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+    'Get up'
   ];
 
   drop(event: CdkDragDrop<string[]>) {

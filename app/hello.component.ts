@@ -7,11 +7,11 @@ import {MatExpansionPanel} from '@angular/material';
   template: `
           <div #dvDragElement >
         This is inside a componenet.
-         <div
+         <div id='child1'
     cdkDropList
     #comp_todoList="cdkDropList"
     [cdkDropListData]="componenet_todo"
-    [cdkDropListConnectedTo]="[todoList]"
+    [cdkDropListConnectedTo]="todoList"
     class="example-list"
     (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let item of componenet_todo" cdkDrag>{{item}}</div>
@@ -23,6 +23,7 @@ import {MatExpansionPanel} from '@angular/material';
   encapsulation: ViewEncapsulation.None,
 })
 export class HelloComponent {
+  @Input() todoList: Array<string>;
 componenet_todo = [
     'Get up',
     'Brush teeth',

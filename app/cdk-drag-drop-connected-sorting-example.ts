@@ -20,7 +20,7 @@ export class CdkDragDropConnectedSortingExample {
   done = [
     'Get up'
   ];
-
+todoList = ['root','child1','child2']
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);

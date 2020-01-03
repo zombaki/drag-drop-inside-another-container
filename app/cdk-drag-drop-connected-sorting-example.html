@@ -24,8 +24,9 @@
     class="example-list"
     (cdkDropListDropped)="drop($event)"> 
     <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    <hello class="example-box" id='child1' [todoList]='todoList'>{{done}}</hello>
  </div>
-     <hello class="example-box" id='child1' [todoList]='todoList'>{{done}}</hello>
+     
 </div>
 </div>
 
